@@ -1,0 +1,37 @@
+CREATE DATABASE IF NOT EXISTS aman;
+USE aman;
+CREATE TABLE IF NOT EXISTS hobies(
+hobiId INT PRIMARY KEY ,
+hobiname VARCHAR(50) ,
+orderId INT);
+
+create table if not exists study(
+studyId int primary key ,
+studyName varchar(50),
+studynum int);
+
+insert into hobies(hobiId,hobiname,orderId)
+values
+(1,"abc",12),
+(2,"asd",13),
+(3,"asr",14);
+
+insert into study(studyId,studyName,studynum)
+values
+(1,"ab",12),
+(2,"ad",13),
+(3,"ar",14);
+
+show tables;
+select * from hobies;
+
+create table employee(
+id int primary key,
+ename varchar(50) ,
+enumb int);
+
+create table orders(
+orderid int primary key,
+ordername varchar(50),
+custoId int,
+foreign key (custoId) references employee(id));
